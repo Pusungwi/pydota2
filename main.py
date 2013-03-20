@@ -1,9 +1,13 @@
 #!/usr/bin/env python
+"""
+    pydota2
+    ~~~~~~
 
-# pydota2 v0.2
-# Dota 2 WebAPI in Python module
-# Author : Yi 'Pusungwi' Yeon Jae
-# License : New BSD License
+    A module for Dota 2 WebAPI.
+
+    :copyright: (c) 2013 by Yi 'Pusungwi' Yeon Jae
+    :license: New BSD License, see LICENSE for more details.
+"""
 
 import os
 import json
@@ -11,8 +15,6 @@ import urllib.request, urllib.parse
 
 VERSION_NUMBER = 0.2
 WEBAPI_KEY = "E1005C7F35530B7E4E462FF4C5090253"
-
-
 GAME_MODE = ["All Pick", "Single Draft", "All Random", "Random Draft", "Captain's Draft", "Captain's Mode", "Death Mode",
  "Diretide", "Reverse Captain's Mode", "The Greeviling", "Tutorial", "Mid Only", "Least Played", "New Player Pool"]
 
@@ -143,7 +145,7 @@ if __name__ == "__main__":
 	tmpLListingDict = pydota.getLeagueListingDict()
 	tmpLLeagueDict = pydota.getLiveLeagueGamesDict()
 	tmpTInfoDict = pydota.getTeamInfoDictByTeamID()
-	tmpMDetailSNDict = pydota.getMatchHistoryDictBySequenceNum("10")
+	tmpMDetailSNDict = pydota.getMatchHistoryDictBySequenceNum("3000")
 	tmpRaritiesDict = pydota.getRaritiesDict()
 
 	print(tmpMHistoryDict)
