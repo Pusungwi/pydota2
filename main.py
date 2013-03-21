@@ -3,7 +3,7 @@
     pydota2
     ~~~~~~
 
-    A module for Dota 2 WebAPI.
+    A module for DOTA 2 WebAPI.
 
     :copyright: (c) 2013 by Yi 'Pusungwi' Yeon Jae
     :license: New BSD License, see LICENSE for more details.
@@ -14,7 +14,6 @@ import json
 import urllib.request, urllib.parse
 
 VERSION_NUMBER = 0.2
-WEBAPI_KEY = "E1005C7F35530B7E4E462FF4C5090253"
 GAME_MODE = ["All Pick", "Single Draft", "All Random", "Random Draft", "Captain's Draft", "Captain's Mode", "Death Mode",
  "Diretide", "Reverse Captain's Mode", "The Greeviling", "Tutorial", "Mid Only", "Least Played", "New Player Pool"]
 
@@ -138,7 +137,8 @@ class pyDota2:
 		return resultDict
 
 if __name__ == "__main__":
-	pydota = pyDota2(WEBAPI_KEY);
+	#visit http://steamcommunity.com/dev and get API key.
+	pydota = pyDota2("INSERT STEAM API KEY HERE");
 	tmpMHistoryDict = pydota.getMatchHistoryDict(matchesRequested=1)
 	tmpMDetailDict = pydota.getMatchDetailDict("151800962")
 	tmpHeroesDict = pydota.getHeroesDict()
